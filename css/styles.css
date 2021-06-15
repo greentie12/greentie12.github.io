@@ -222,7 +222,29 @@ button {
 }
 
 .pointer-down {
-  display: none;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  bottom: -35%;
+  animation: placement 2s infinite;
+}
+
+.pointer-down a i {
+  color: var(--secondary-color-light);
+  font-size: 2rem;
+}
+
+@keyframes placement {
+  0% {
+    bottom: -35%;
+    opacity: 1;
+  }
+
+  100% {
+    bottom: -40%;
+    opacity: 0;
+  }
 }
 
 /*  
@@ -533,32 +555,6 @@ footer a {
 
   .intro h1 {
     font-size: 2.3rem;
-  }
-
-  .pointer-down {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    justify-content: center;
-    bottom: -35%;
-    animation: placement 2s infinite;
-  }
-
-  .pointer-down a i {
-    color: var(--secondary-color-light);
-    font-size: 2rem;
-  }
-
-  @keyframes placement {
-    0% {
-      bottom: -35%;
-      opacity: 1;
-    }
-
-    100% {
-      bottom: -40%;
-      opacity: 0;
-    }
   }
 
   .years {
