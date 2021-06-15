@@ -9,13 +9,13 @@ function checkImages() {
     const imageTop = image.getBoundingClientRect().top;
     const width = window.innerWidth;
 
-    if (imageTop < triggerBottom && width < 768) {
+    if (imageTop < triggerBottom && width < 768 && width >= 400) {
       image.classList.add("show");
     } else {
       image.classList.remove("show");
     }
 
-    if (width >= 768) {
+    if (width >= 768 || width < 400) {
       image.classList.add("show");
     }
   });
